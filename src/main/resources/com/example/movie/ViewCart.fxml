@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movie.ViewCart">
+    <children>
+        <!-- Title Text for View Cart -->
+        <Text layoutX="345.0" layoutY="146.0" scaleX="2.0" scaleY="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Cart">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Text>
+
+        <!-- VBox to display cart items -->
+        <VBox fx:id="cartItemsVBox" layoutX="230.0" layoutY="187.0" prefHeight="200.0" prefWidth="340.0" spacing="10">
+            <!-- Cart items will be dynamically added here in the controller -->
+        </VBox>
+
+        <!-- Text asking for further action -->
+        <Text fill="#b72727" layoutX="346.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anything Else">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+
+        <!-- Button for confirmation -->
+        <Button fx:id="yesButton" layoutX="318.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleConfirmation" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #B72727;" text="Yes" textFill="WHITE" />
+
+        <!-- Button for payment -->
+        <Button fx:id="payButton" layoutX="420.0" layoutY="329.0" mnemonicParsing="false" onAction="#handlePayment" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #B72727;" text="Pay" textFill="WHITE" />
+    </children>
+</AnchorPane>

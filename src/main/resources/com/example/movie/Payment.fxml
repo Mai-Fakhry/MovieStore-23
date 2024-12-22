@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movie.PaymentController">
+    <children>
+        <!-- Title Text -->
+        <Text layoutX="350.0" layoutY="140.0" scaleX="2.0" scaleY="2.0" scaleZ="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Text>
+
+        <!-- Instruction Text -->
+        <Text layoutX="301.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose your payment method" />
+
+        <!-- Done Button -->
+        <Button fx:id="done" layoutX="385.0" layoutY="415.0" mnemonicParsing="false" onAction="#handleDoneAction" prefHeight="17.0" prefWidth="56.0" style="-fx-background-color: #B72727;" text="Done" textFill="WHITE" />
+
+        <!-- Radio Buttons for Payment Methods -->
+        <RadioButton fx:id="CREDIT_CARDRadio" layoutX="359.0" layoutY="226.0" text="Credit Card">
+         <toggleGroup>
+            <ToggleGroup fx:id="Payment" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="DEBIT_CARDRadio" layoutX="360.0" layoutY="266.0" text="Debit Card" toggleGroup="$Payment" />
+        <RadioButton fx:id="PAYPALRadio" layoutX="361.0" layoutY="300.0" text="PayPal" toggleGroup="$Payment" />
+        <RadioButton fx:id="BANK_TRANSFERRadio" layoutX="361.0" layoutY="336.0" text="Bank Transfer" toggleGroup="$Payment" />
+        <RadioButton fx:id="CASH_ON_DELIVERYRadio" layoutX="362.0" layoutY="371.0" text="Cash on Delivery" toggleGroup="$Payment" />
+
+    </children>
+</AnchorPane>

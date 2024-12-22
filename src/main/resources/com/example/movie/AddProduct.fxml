@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movie.AddProductController">
+   <children>
+      <Text layoutX="347.0" layoutY="142.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Movie" wrappingWidth="104.82818603515625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#b72727" layoutX="271.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the movie you want to add here" wrappingWidth="221.57421875" />
+
+      <!-- View Movies Button -->
+      <Button fx:id="ViewMovies" layoutX="284.0" layoutY="421.0" mnemonicParsing="false" onAction="#handleViewMovies" style="-fx-background-color: #B72727;" text="View all Movies" textFill="WHITE" />
+
+      <!-- Name TextField -->
+      <TextField fx:id="Name" layoutX="315.0" layoutY="225.0" promptText="Name" />
+
+      <!-- Return Button -->
+      <Button fx:id="Return" layoutX="409.0" layoutY="421.0" mnemonicParsing="false" onAction="#handleReturn" prefHeight="26.0" prefWidth="56.0" style="-fx-background-color: #B72727;" text="Return" textFill="WHITE" />
+
+      <!-- Price TextField -->
+      <TextField fx:id="Price" layoutX="315.0" layoutY="260.0" promptText="Price" />
+
+      <!-- Serial Number TextField -->
+      <TextField fx:id="SerialNumber" layoutX="315.0" layoutY="294.0" promptText="Serial Number" />
+
+      <!-- Category ComboBox -->
+      <ComboBox fx:id="Category" layoutX="315.0" layoutY="327.0" prefWidth="150.0" promptText="Category">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Action" />
+               <String fx:value="Comedy" />
+               <String fx:value="Drama" />
+               <String fx:value="Adventure" />
+               <String fx:value="Romance" />
+               <String fx:value="Horror" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+
+      <!-- Add Button -->
+      <Button fx:id="add" layoutX="371.0" layoutY="379.0" mnemonicParsing="false" onAction="#handleAddProduct" style="-fx-background-color: #B72727;" text="Add" textFill="WHITE" />
+   </children>
+</AnchorPane>

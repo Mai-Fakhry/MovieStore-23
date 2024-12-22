@@ -1,0 +1,19 @@
+/* Root styling with a background image */
+.root {
+    -fx-background-image: url("\BG3.jpg"); /* Ensure the correct relative path */
+    -fx-background-size: 100% 100%; /* Scales the image to fit the entire root */
+    -fx-background-position: center; /* Centers the image */
+    -fx-background-repeat: no-repeat; /* Prevents tiling */
+}
+
+/* Style for the AnchorPane to center all children */
+AnchorPane {
+    -fx-alignment: center; /* Centers all children within the AnchorPane */
+}
+
+/* Center-align all children of the AnchorPane */
+AnchorPane > * {
+    -fx-layout-x: calc((100% - 220px) / 2); /* Centers horizontally */
+    -fx-layout-y: calc((100% - 30px) / 2); /* Centers vertically */
+    -fx-translate-y: -30px; /* Adjust for better alignment */
+}

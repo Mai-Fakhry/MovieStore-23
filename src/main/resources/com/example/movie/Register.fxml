@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movie.RegistrationController">
+    <children>
+        <!-- Registration Title Label -->
+        <Label layoutX="103.0" layoutY="96.0" text="Registration">
+            <font>
+                <Font name="Arial" size="36.0" />
+            </font>
+        </Label>
+
+        <!-- Username Field -->
+        <TextField fx:id="usernameField" layoutX="67.0" layoutY="164.0" prefHeight="30.0" prefWidth="266.0" promptText="Username" />
+
+        <!-- Password Field -->
+        <PasswordField fx:id="passwordField" layoutX="67.0" layoutY="214.0" prefHeight="30.0" prefWidth="266.0" promptText="Password" />
+
+        <!-- Address Field -->
+        <TextField fx:id="addressField" layoutX="67.0" layoutY="260.0" prefHeight="30.0" prefWidth="266.0" promptText="Address" />
+
+        <!-- Date of Birth Field -->
+        <DatePicker fx:id="birthDatePicker" layoutX="67.0" layoutY="304.0" prefHeight="30.0" prefWidth="266.0" />
+
+        <!-- Gender ComboBox -->
+        <ComboBox fx:id="genderComboBox" layoutX="67.0" layoutY="349.0" prefHeight="30.0" prefWidth="266.0" promptText="Gender">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Male" />
+                    <String fx:value="Female" />
+                    <String fx:value="Other" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <!-- Interests Field -->
+        <TextField fx:id="interestsField" layoutX="67.0" layoutY="398.0" prefHeight="30.0" prefWidth="266.0" promptText="Interests (comma separated)" />
+
+        <!-- Register Button -->
+        <Button fx:id="registerButton" layoutX="114.0" layoutY="453.0" onAction="#handleRegistration" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #B72727; -fx-background-radius: 10;" text="Register" textFill="WHITE" />
+
+        <!-- Error Label -->
+        <Label fx:id="errorLabel" layoutX="59.0" layoutY="470.0" textFill="RED" visible="false" />
+    </children>
+</AnchorPane>
